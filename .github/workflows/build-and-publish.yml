@@ -31,4 +31,4 @@ jobs:
           crossplane xpkg build --package-root=. --examples-root="./examples" --ignore=".github/workflows/*,crossplane/install/*,crossplane/provider/*,kuttl-test.yaml,tests/compositions/eks/*,tests/compositions/networking/*" --verbose
 
           echo "### Publish as OCI image to GHCR"
-          crossplane xpkg push "ghcr.io/jonashackt/crossplane-eks-cluster:$CONFIGURATION_VERSION" --domain=https://ghcr.io --verbose
+          crossplane xpkg push "ghcr.io/sudoleg/crossplane-training-s3:$CONFIGURATION_VERSION" --domain=https://ghcr.io --verbose
