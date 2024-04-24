@@ -3,16 +3,11 @@ name: publish
 on: [push]
 
 env:
-  GHCR_PAT: ${{ secrets.GHCR_PAT }}
+  GHCR_PAT: ${{ secrets.CR_PAT }}
   CONFIGURATION_VERSION: "v0.0.2"
 
 jobs:
-  resouces-rendering-test:
-    ...
-
-jobs:
   build-configuration-and-publish-to-ghcr:
-    needs: resouces-rendering-test
     runs-on: ubuntu-latest
 
     steps:
